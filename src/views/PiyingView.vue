@@ -22,6 +22,7 @@ const schema = v.pipe(
     ),
     checkbox1: v.optional(v.boolean()),
   }),
+  v.title('form'),
   setComponent('fieldset'),
 )
 let options = {
