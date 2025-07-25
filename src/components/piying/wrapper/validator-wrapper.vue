@@ -5,11 +5,11 @@ import { inject } from 'vue'
 import { summarize } from 'valibot'
 
 const field = inject(PI_VIEW_FIELD_TOKEN)!
-let statusClass = signalToRef(() => fieldControlStatusClass(field?.value.form.control))
-let hasError = signalToRef(() => !!field?.value.form.control!.errors)
-let errorStr = signalToRef(() => {
-  let fc = field?.value
-  let errors = field?.value.form.control!.errors
+const statusClass = signalToRef(() => fieldControlStatusClass(field?.value.form.control))
+const hasError = signalToRef(() => !!field?.value.form.control!.errors)
+const errorStr = signalToRef(() => {
+  const fc = field?.value
+  const errors = field?.value.form.control!.errors
   if (errors) {
     const valibot = errors['valibot']
     if (valibot) {

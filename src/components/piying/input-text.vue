@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useControlValueAccessor } from '@piying/view-vue'
-import { vModelText } from 'vue'
 import { vModelDynamic } from 'vue'
 
 const { cva, value, disabled, valueChange, touchedChange } = useControlValueAccessor()

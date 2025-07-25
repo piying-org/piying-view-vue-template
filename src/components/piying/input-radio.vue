@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useControlValueAccessor } from '@piying/view-vue'
-import { computed, vModelText } from 'vue'
+import { computed } from 'vue'
 import { vModelDynamic } from 'vue'
 import {
   DefaultOptionConvert,
@@ -30,7 +30,7 @@ const name = `radio-${getRadioIndex()}`
         class="radio"
         v-model-dynamic="value"
         :onUpdate:modelValue="valueChange"
-        v-bind:disabled="field.disabled"
+        v-bind:disabled="field.disabled || disabled"
         @blur="touchedChange"
         :value="field.value"
       />

@@ -25,14 +25,14 @@ const schema = v.pipe(
   v.title('form'),
   setComponent('fieldset'),
 )
-let options = {
+const options = {
   fieldGlobalConfig: fieldConfig,
   builder: CustomNgBuilder,
 }
 function modelChange(event: any) {
   console.log(event)
 }
-let model = ref({})
+const model = ref({})
 </script>
 <template>
   <piying-view

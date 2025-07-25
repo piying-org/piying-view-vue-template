@@ -6,8 +6,8 @@ import { inject } from 'vue'
 const dInputs = defineProps<{
   fields: PiResolvedViewFieldConfig[]
 }>()
-let field = inject(PI_VIEW_FIELD_TOKEN)
-let props = signalToRef(() => field?.value.props())
+const field = inject(PI_VIEW_FIELD_TOKEN)
+const props = signalToRef(() => field?.value.props())
 </script>
 <template>
   <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 w-full">

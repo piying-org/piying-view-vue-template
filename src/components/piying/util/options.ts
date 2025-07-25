@@ -24,7 +24,7 @@ export interface ResolvedOption {
 }
 export function transformOptions(options: any[], optionConvert: OptionConvert): ResolvedOption[] {
   return options.map((option) => {
-    let resolvedItem: ResolvedOption = {
+    const resolvedItem: ResolvedOption = {
       label: optionConvert.label(option),
       value: optionConvert.value(option),
       disabled: optionConvert.disabled?.(option) ?? false,

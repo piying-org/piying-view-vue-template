@@ -1,4 +1,4 @@
-import { computed, Injectable, isSignal, linkedSignal } from 'static-injector'
+import { computed, isSignal, linkedSignal } from 'static-injector'
 import { VueSchemaHandle, VueFormBuilder } from '@piying/view-vue'
 import type { PiResolvedViewFieldConfig } from '@piying/view-vue'
 import { deepEqual } from 'fast-equals'
