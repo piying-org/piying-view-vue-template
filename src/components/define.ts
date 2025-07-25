@@ -4,6 +4,7 @@ import InputRadio from './piying/input-radio.vue'
 import InputCheckbox from './piying/input-checkbox.vue'
 import FieldsetGroup from './piying/group/fieldset.vue'
 import LabelWrapper from './piying/wrapper/label-wrapper.vue'
+import ValidatorWrapper from './piying/wrapper/validator-wrapper.vue'
 import type { PiViewConfig } from '@piying/view-vue'
 export const fieldConfig = {
   types: {
@@ -16,6 +17,9 @@ export const fieldConfig = {
   wrappers: {
     label: {
       type: LabelWrapper,
+    },
+    validator: {
+      type: ValidatorWrapper,
     },
   },
 } as PiViewConfig

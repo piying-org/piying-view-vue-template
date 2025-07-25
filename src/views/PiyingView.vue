@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PiyingView } from '@piying/view-vue'
-import { patchInputs, setComponent } from '@piying/view-core'
+import { patchInputs, patchWrappers, setComponent } from '@piying/view-core'
 import * as v from 'valibot'
 import { fieldConfig } from '@/components/define'
 import { ref } from 'vue'
@@ -8,7 +8,7 @@ import { CustomNgBuilder } from '@/components/piying/custom.builder'
 const schema = v.pipe(
   v.object({
     text1: v.pipe(v.optional(v.string()), v.title('text1-label')),
-    number1: v.pipe(v.optional(v.number()), v.title('number1')),
+    number1: v.pipe(v.number(), v.title('number1'), patchWrappers(['label', 'validator'])),
     radio1: v.pipe(
       v.optional(v.picklist(['v1', 'v2'])),
       setComponent('radio'),
