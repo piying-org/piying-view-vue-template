@@ -18,7 +18,7 @@
     "@piying/view-vue": "^1.1.9",
     "@tailwindcss/vite": "^4.1.11",
     "@valibot/i18n": "^1.0.0",
-    "daisyui": "^5.0.46",
+    "daisyui": "^5.0.47",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.11",
     "valibot": "^1.1.0",
