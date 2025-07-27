@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import PiyingPage from './views/PiyingView.vue'
+import { RouterView } from 'vue-router'
+
 import '@valibot/i18n/zh-CN'
 import { setGlobalConfig } from 'valibot'
 const browserLanguage = navigator.language
@@ -11,7 +10,7 @@ if (browserLanguage.startsWith('zh')) {
 </script>
 
 <template>
-  <PiyingPage></PiyingPage>
+  <RouterView />
 </template>
 
 <style scoped></style>
