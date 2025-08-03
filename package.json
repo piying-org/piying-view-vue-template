@@ -15,7 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@piying/view-vue": "^1.1.16",
+    "@piying/view-vue": "^1.1.17",
     "@tailwindcss/vite": "^4.1.11",
     "@valibot/i18n": "^1.0.0",
     "daisyui": "^5.0.47",
