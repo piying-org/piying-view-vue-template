@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PiyingView } from '@piying/view-vue'
-import { patchInputs, patchWrappers, setComponent } from '@piying/view-core'
+import { NFCSchema, patchInputs, patchWrappers, setComponent } from '@piying/view-core'
 import * as v from 'valibot'
 import { fieldConfig } from '@/components/define'
 import { ref } from 'vue'
@@ -21,6 +21,7 @@ const schema = v.pipe(
       v.title('radio1-title'),
     ),
     checkbox1: v.optional(v.boolean()),
+    __formHelper: v.pipe(NFCSchema, setComponent('formHelper')),
   }),
   v.title('form'),
   setComponent('fieldset'),

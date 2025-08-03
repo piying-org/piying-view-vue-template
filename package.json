@@ -19,6 +19,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "@valibot/i18n": "^1.0.0",
     "daisyui": "^5.0.47",
+    "json-formatter-js": "^2.5.23",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.11",
     "valibot": "^1.1.0",

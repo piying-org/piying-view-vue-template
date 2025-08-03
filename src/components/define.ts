@@ -13,6 +13,7 @@ export const fieldConfig = {
     radio: { type: InputRadio },
     boolean: { type: InputCheckbox, wrappers: ['label'] },
     fieldset: { type: FieldsetGroup },
+    formHelper: { type: () => import('./piying/form-helper.vue') },
   },
   wrappers: {
     label: {
