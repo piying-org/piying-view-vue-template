@@ -8,6 +8,11 @@ const router = createRouter({
       name: 'piying',
       component: () => import('../views/PiyingView.vue'),
     },
+    {
+      path: '/manual',
+      name: 'piying-manual',
+      component: () => import('../views/PiyingManual.vue'),
+    },
   ],
 })
 

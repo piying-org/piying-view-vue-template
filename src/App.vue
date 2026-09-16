@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 
 import '@valibot/i18n/zh-CN'
 import { setGlobalConfig } from 'valibot'
@@ -10,6 +10,10 @@ if (browserLanguage.startsWith('zh')) {
 </script>
 
 <template>
+  <nav class="flex gap-4 border-b p-3">
+    <RouterLink class="link" to="/">auto</RouterLink>
+    <RouterLink class="link" to="/manual">manual</RouterLink>
+  </nav>
   <RouterView />
 </template>
 

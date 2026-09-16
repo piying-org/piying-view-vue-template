@@ -19,6 +19,7 @@ const props = withDefaults(defineProps<{ options?: any[]; optionConvert?: Option
     return { ...DefaultOptionConvert, ...props.optionConvert }
   },
 })
+const emit = defineEmits<{ indexChange: [index: number] }>()
 const resolvedOptions = computed(() => {
   return transformOptions(props.options, props.optionConvert)
 })
@@ -35,6 +36,7 @@ const name = `radio-${getRadioIndex()}`
         :onUpdate:modelValue="valueChange"
         v-bind:disabled="field.disabled || disabled"
         @blur="touchedChange"
+        @change="emit('indexChange', index)"
         :value="field.value"
       />
       <div class="label">{{ field.label }}</div>
