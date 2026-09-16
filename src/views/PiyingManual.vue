@@ -11,7 +11,6 @@ import {
 import { computed, provide, unref } from 'vue'
 import { fieldConfig } from '@/components/define'
 import { CustomNgBuilder } from '@/components/piying/custom.builder'
-import { root } from '@/injector'
 
 const Schema = v.object({
   text1: v.pipe(v.optional(v.string()), v.title('text1-label')),
@@ -59,7 +58,7 @@ const field = convertToField(
 
 provide(
   InjectorToken,
-  computed(() => root),
+  computed(() => field.injector),
 )
 </script>
 
