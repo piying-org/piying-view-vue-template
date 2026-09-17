@@ -72,7 +72,7 @@ provide(
         placeholder="text1"
         :value="unref(cvaa.value) ?? ''"
         :disabled="unref(cvaa.disabled)"
-        @input="cvaa.valueChange($event.target.value)"
+        @input="cvaa.valueChange($event.target!.value)"
         @blur="cvaa.touchedChange"
       />
     </Field>
@@ -86,7 +86,7 @@ provide(
         :value="unref(cvaa.value) ?? ''"
         :disabled="unref(cvaa.disabled)"
         @input="
-          cvaa.valueChange($event.target.value === '' ? undefined : Number($event.target.value))
+          cvaa.valueChange($event.target!.value === '' ? 0 : Number($event.target!.value))
         "
         @blur="cvaa.touchedChange"
       />
@@ -96,14 +96,14 @@ provide(
     <PiyingFieldTemplate :field="field" :path="['radio1']" />
 
     <!-- 原生 checkbox 绑到 checkbox1 -->
-    <Field :field="field" :path="['checkbox1']" v-slot="{ cvaa }">
+    <Field :field="field" :path="['checkbox1']" v-slot="{ cvaa ,field}">
       <label class="label cursor-pointer justify-start gap-2">
         <input
           type="checkbox"
           class="checkbox"
           :checked="unref(cvaa.value) ?? false"
           :disabled="unref(cvaa.disabled)"
-          @change="cvaa.valueChange($event.target.checked)"
+          @change="cvaa.valueChange($event.target!.checked)"
           @blur="cvaa.touchedChange"
         />
         <span class="label-text">checkbox1</span>
